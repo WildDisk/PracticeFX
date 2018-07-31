@@ -1,16 +1,55 @@
+#rootAnchorPane {
+    -fx-background-color: #858585;
+}
+
+#mainAnchorPane {
+    -fx-background-color: #787777;
+}
+
 .button {
-    -fx-background-color: rgba(36, 33, 33, 0.79);
-    -fx-text-fill: #ffffff;
+    -fx-background-color: rgba(0, 0, 0, 0);
+    -fx-text-fill: #000000;
     -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);
+    -fx-background-radius: 0;
+}
+
+.button: hover {
+    -fx-background-color: rgba(82, 78, 78, 0.99);
+    -fx-text-fill: #ffffff;
+    -fx-background-radius: 0;
 }
 
 .button:pressed {
-    -fx-background-color: #b8b8b8;
-    -fx-text-fill: #000000;
+    -fx-background-color: rgba(36, 33, 33, 0.79);
+    -fx-text-fill: #ffffff;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);
+    -fx-background-radius: 0;
+}
+
+#btnDown {
+    -fx-background-color: rgba(82, 78, 78, 0.99);
+    -fx-text-fill: #ffffff;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);
+    -fx-background-radius: 0;
+}
+
+#btnDown:pressed {
+    -fx-background-color: rgba(36, 33, 33, 0.79);
+    -fx-text-fill: #ffffff;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);
+    -fx-background-radius: 0;
+}
+
+.label {
+    -fx-text-fill: #ffffff;
 }
 
 .text-field{
    -fx-background-color: #b8b8b8;
    -fx-text-fill: #000000;
    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);
+}
+
+.scroll-pane {
+      -fx-control-inner-background: #b8b8b8;
 }
