@@ -1,0 +1,53 @@
+.chart {
+    -fx-background-color: #858585;
+}
+.chart-content {
+    -fx-background-color: #858585;
+    -fx-padding: 30px;
+}
+
+.chart-title {
+  -fx-text-fill: #ffffff;
+  -fx-font-size: 1.6em;
+}
+
+.axis {
+    -fx-font-size: 1.4em;
+    -fx-tick-label-fill: #ffffff;
+    -fx-font-family: Tahoma;
+    -fx-tick-length: 20;
+    -fx-minor-tick-length: 10;
+}
+
+.axis-label {
+  -fx-text-fill: #000000;
+}
+
+.chart-legend {
+   -fx-background-color:  transparent;
+   -fx-padding: 20px;
+}
+
+.chart-legend-item-symbol{
+   -fx-background-radius: 0;
+}
+
+.chart-legend-item{
+    -fx-text-fill: #ffffff;
+}
+
+.chart-plot-background {
+    -fx-background-color: #858585;
+}
+.chart-vertical-grid-lines {
+    -fx-stroke: #ffffff;
+}
+.chart-horizontal-grid-lines {
+    -fx-text-fill: #ffffff;
+    -fx-stroke: #ffffff;
+}
+.chart-alternative-row-fill {
+    -fx-fill: #bab5b5;
+    -fx-stroke: transparent;
+    -fx-stroke-width: 0;
+}
