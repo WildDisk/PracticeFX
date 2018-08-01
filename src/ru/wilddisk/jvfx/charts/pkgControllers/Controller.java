@@ -1,16 +1,24 @@
 package ru.wilddisk.jvfx.charts.pkgControllers;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.scene.Scene;
 import javafx.scene.chart.LineChart;
 import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
+import javafx.scene.layout.GridPane;
+import javafx.scene.layout.Priority;
 import javafx.stage.Stage;
 
+import java.io.PrintWriter;
+import java.io.StringWriter;
+
 public class Controller {
-    public TextField ChartTitle, ChartLable;
-    public TextField inPoint1, inPoint2, inPoint3, inPoint4, inPoint5, inPoint6, inPoint7, inPoint8,
+    @FXML
+    private TextField ChartTitle, ChartLable;
+    @FXML
+    private TextField inPoint1, inPoint2, inPoint3, inPoint4, inPoint5, inPoint6, inPoint7, inPoint8,
                             inPoint9, inPoint10, inPoint11, inPoint12;
 
     public void showChart(ActionEvent actionEvent) {
@@ -50,6 +58,44 @@ public class Controller {
             stage.show();
         } catch (Exception e) {
             e.printStackTrace();
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Alarm!");
+            alert.setHeaderText("Ой! Видно что то пошло не так!");
+            alert.setContentText("По любому пытался буквы ввести, да?\n" +
+                                 "Невозможно построить график используя буквы!\n" +
+                                 "Как ты вообще себе это представляешь?");
+
+            Exception ex = new Exception("StackTrace");
+
+// Create expandable Exception.
+            StringWriter sw = new StringWriter();
+            PrintWriter pw = new PrintWriter(sw);
+            ex.printStackTrace(pw);
+            String exceptionText = sw.toString();
+
+            Label label = new Label("The exception stacktrace was:");
+
+            TextArea textArea = new TextArea(exceptionText);
+            textArea.setEditable(false);
+            textArea.setWrapText(true);
+
+            textArea.setMaxWidth(Double.MAX_VALUE);
+            textArea.setMaxHeight(Double.MAX_VALUE);
+            GridPane.setVgrow(textArea, Priority.ALWAYS);
+            GridPane.setHgrow(textArea, Priority.ALWAYS);
+
+            GridPane expContent = new GridPane();
+            expContent.setMaxWidth(Double.MAX_VALUE);
+            expContent.add(label, 0, 0);
+            expContent.add(textArea, 0, 1);
+
+            // Set expandable Exception into the dialog pane.
+            alert.getDialogPane().setExpandableContent(expContent);
+            alert.showAndWait();
         }
+    }
+    @FXML
+    public void closeDialog(ActionEvent actionEvent) {
+        ((Stage)(((Button)actionEvent.getSource()).getScene().getWindow())).close();
     }
 }
