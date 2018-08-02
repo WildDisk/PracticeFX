@@ -20,23 +20,23 @@
               <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="398.0" prefWidth="640.0" style="-fx-background-color: #858585;;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
-                        <AnchorPane fx:id="AncPaneCh1" minHeight="0.0" minWidth="0.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="398.0" prefWidth="640.0" style="-fx-background-color: #858585;;" visible="false">
+                        <AnchorPane fx:id="AncPaneCh1" disable="true" minHeight="0.0" minWidth="0.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="398.0" prefWidth="640.0" style="-fx-background-color: #858585;;" visible="false">
                            <children>
                               <Label layoutX="20.0" layoutY="19.0" text="Перва точка:" />
-                              <TextField fx:id="inCh1Point1" layoutX="174.0" layoutY="14.0" text="0" />
+                              <TextField fx:id="inCh1Point1" layoutX="174.0" layoutY="14.0" prefWidth="110.0" text="0" />
                               <Label layoutX="20.0" layoutY="51.0" text="Вторая точка: " />
-                              <TextField fx:id="inCh1Point2" layoutX="174.0" layoutY="46.0" text="1" />
+                              <TextField fx:id="inCh1Point2" layoutX="174.0" layoutY="46.0" prefWidth="110.0" text="1" />
                               <Label layoutX="21.0" layoutY="83.0" text="Третья точка: " />
-                              <TextField fx:id="inCh1Point3" layoutX="174.0" layoutY="78.0" text="2" />
-                              <TextField fx:id="inCh1Point4" layoutX="174.0" layoutY="110.0" text="3" />
-                              <TextField fx:id="inCh1Point5" layoutX="174.0" layoutY="142.0" text="4" />
-                              <TextField fx:id="inCh1Point6" layoutX="174.0" layoutY="174.0" text="5" />
-                              <TextField fx:id="inCh1Point7" layoutX="174.0" layoutY="206.0" text="6" />
-                              <TextField fx:id="inCh1Point8" layoutX="174.0" layoutY="238.0" text="7" />
-                              <TextField fx:id="inCh1Point9" layoutX="174.0" layoutY="270.0" text="8" />
-                              <TextField fx:id="inCh1Point10" layoutX="174.0" layoutY="302.0" text="9" />
-                              <TextField fx:id="inCh1Point11" layoutX="174.0" layoutY="334.0" text="10" />
-                              <TextField fx:id="inCh1Point12" layoutX="174.0" layoutY="366.0" text="11" />
+                              <TextField fx:id="inCh1Point3" layoutX="174.0" layoutY="78.0" prefWidth="110.0" text="2" />
+                              <TextField fx:id="inCh1Point4" layoutX="174.0" layoutY="110.0" prefWidth="110.0" text="3" />
+                              <TextField fx:id="inCh1Point5" layoutX="174.0" layoutY="142.0" prefWidth="110.0" text="4" />
+                              <TextField fx:id="inCh1Point6" layoutX="174.0" layoutY="174.0" prefWidth="110.0" text="5" />
+                              <TextField fx:id="inCh1Point7" layoutX="174.0" layoutY="206.0" prefWidth="110.0" text="6" />
+                              <TextField fx:id="inCh1Point8" layoutX="174.0" layoutY="238.0" prefWidth="110.0" text="7" />
+                              <TextField fx:id="inCh1Point9" layoutX="174.0" layoutY="270.0" prefWidth="110.0" text="8" />
+                              <TextField fx:id="inCh1Point10" layoutX="174.0" layoutY="302.0" prefWidth="110.0" text="9" />
+                              <TextField fx:id="inCh1Point11" layoutX="174.0" layoutY="334.0" prefWidth="110.0" text="10" />
+                              <TextField fx:id="inCh1Point12" layoutX="174.0" layoutY="366.0" prefWidth="110.0" text="11" />
                               <Label layoutX="20.0" layoutY="115.0" text="Четвертая точка:" />
                               <Label layoutX="20.0" layoutY="147.0" text="Пятая точка: " />
                               <Label layoutX="21.0" layoutY="179.0" text="Шестая точка: " />
@@ -46,25 +46,31 @@
                               <Label layoutX="20.0" layoutY="304.0" text="Десятая точка:" />
                               <Label layoutX="20.0" layoutY="336.0" text="Одиннадцатая точка: " />
                               <Label layoutX="21.0" layoutY="368.0" text="Двенадцатая точка: " />
+                              <Label layoutX="299.0" layoutY="18.0" text="Подпись серии: " />
+                              <TextField fx:id="seriesCh1" layoutX="405.0" layoutY="14.0" prefHeight="25.0" prefWidth="217.0" />
+                              <ImageView fitHeight="246.0" fitWidth="329.0" layoutX="302.0" layoutY="112.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../ico/OneChart.png" />
+                                 </image></ImageView>
                            </children>
                         </AnchorPane>
-                        <AnchorPane fx:id="AncPaneCh2" minHeight="0.0" minWidth="0.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="398.0" prefWidth="640.0" style="-fx-background-color: #858585;;" visible="false">
+                        <AnchorPane fx:id="AncPaneCh2" disable="true" minHeight="0.0" minWidth="0.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="398.0" prefWidth="640.0" style="-fx-background-color: #858585;;" visible="false">
                            <children>
                               <Label layoutX="20.0" layoutY="19.0" text="Перва точка:" />
-                              <TextField fx:id="inCh2Point1" layoutX="174.0" layoutY="14.0" text="0" />
+                              <TextField fx:id="inCh2Point1" layoutX="174.0" layoutY="14.0" prefWidth="110.0" text="0" />
                               <Label layoutX="20.0" layoutY="51.0" text="Вторая точка: " />
-                              <TextField fx:id="inCh2Point2" layoutX="174.0" layoutY="46.0" text="1" />
+                              <TextField fx:id="inCh2Point2" layoutX="174.0" layoutY="46.0" prefWidth="110.0" text="1" />
                               <Label layoutX="21.0" layoutY="83.0" text="Третья точка: " />
-                              <TextField fx:id="inCh2Point3" layoutX="174.0" layoutY="78.0" text="2" />
-                              <TextField fx:id="inCh2Point4" layoutX="174.0" layoutY="110.0" text="3" />
-                              <TextField fx:id="inCh2Point5" layoutX="174.0" layoutY="142.0" text="4" />
-                              <TextField fx:id="inCh2Point6" layoutX="174.0" layoutY="174.0" text="5" />
-                              <TextField fx:id="inCh2Point7" layoutX="174.0" layoutY="206.0" text="6" />
-                              <TextField fx:id="inCh2Point8" layoutX="174.0" layoutY="238.0" text="7" />
-                              <TextField fx:id="inCh2Point9" layoutX="174.0" layoutY="270.0" text="8" />
-                              <TextField fx:id="inCh2Point10" layoutX="174.0" layoutY="302.0" text="9" />
-                              <TextField fx:id="inCh2Point11" layoutX="174.0" layoutY="334.0" text="10" />
-                              <TextField fx:id="inCh2Point12" layoutX="174.0" layoutY="366.0" text="11" />
+                              <TextField fx:id="inCh2Point3" layoutX="174.0" layoutY="78.0" prefWidth="110.0" text="2" />
+                              <TextField fx:id="inCh2Point4" layoutX="174.0" layoutY="110.0" prefWidth="110.0" text="3" />
+                              <TextField fx:id="inCh2Point5" layoutX="174.0" layoutY="142.0" prefWidth="110.0" text="4" />
+                              <TextField fx:id="inCh2Point6" layoutX="174.0" layoutY="174.0" prefWidth="110.0" text="5" />
+                              <TextField fx:id="inCh2Point7" layoutX="174.0" layoutY="206.0" prefWidth="110.0" text="6" />
+                              <TextField fx:id="inCh2Point8" layoutX="174.0" layoutY="238.0" prefWidth="110.0" text="7" />
+                              <TextField fx:id="inCh2Point9" layoutX="174.0" layoutY="270.0" prefWidth="110.0" text="8" />
+                              <TextField fx:id="inCh2Point10" layoutX="174.0" layoutY="302.0" prefWidth="110.0" text="9" />
+                              <TextField fx:id="inCh2Point11" layoutX="174.0" layoutY="334.0" prefWidth="110.0" text="10" />
+                              <TextField fx:id="inCh2Point12" layoutX="174.0" layoutY="366.0" prefWidth="110.0" text="11" />
                               <Label layoutX="20.0" layoutY="115.0" text="Четвертая точка:" />
                               <Label layoutX="20.0" layoutY="147.0" text="Пятая точка: " />
                               <Label layoutX="21.0" layoutY="179.0" text="Шестая точка: " />
@@ -74,30 +80,34 @@
                               <Label layoutX="20.0" layoutY="304.0" text="Десятая точка:" />
                               <Label layoutX="20.0" layoutY="336.0" text="Одиннадцатая точка: " />
                               <Label layoutX="21.0" layoutY="368.0" text="Двенадцатая точка: " />
-                              <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="380.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fitHeight="246.0" fitWidth="329.0" layoutX="302.0" layoutY="112.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../ico/icoCross_press.png" />
+                                    <Image url="@../ico/TwoChart.png" />
                                  </image>
                               </ImageView>
+                              <Label layoutX="299.0" layoutY="18.0" text="Подпись серии 1: " />
+                              <TextField fx:id="series1Ch2" layoutX="405.0" layoutY="14.0" prefHeight="25.0" prefWidth="217.0" />
+                              <Label layoutX="299.0" layoutY="48.0" text="Подпись серии 2: " />
+                              <TextField fx:id="series2Ch2" layoutX="405.0" layoutY="44.0" prefHeight="25.0" prefWidth="217.0" />
                            </children>
                         </AnchorPane>
-                        <AnchorPane fx:id="AncPaneCh3" minHeight="0.0" minWidth="0.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="398.0" prefWidth="640.0" style="-fx-background-color: #858585;;" visible="false">
+                        <AnchorPane fx:id="AncPaneCh3" disable="true" minHeight="0.0" minWidth="0.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="398.0" prefWidth="640.0" style="-fx-background-color: #858585;;" visible="false">
                            <children>
                               <Label layoutX="20.0" layoutY="19.0" text="Перва точка:" />
-                              <TextField fx:id="inCh3Point1" layoutX="174.0" layoutY="14.0" text="0" />
+                              <TextField fx:id="inCh3Point1" layoutX="174.0" layoutY="14.0" prefWidth="110.0" text="0" />
                               <Label layoutX="20.0" layoutY="51.0" text="Вторая точка: " />
-                              <TextField fx:id="inCh3Point2" layoutX="174.0" layoutY="46.0" text="1" />
+                              <TextField fx:id="inCh3Point2" layoutX="174.0" layoutY="46.0" prefWidth="110.0" text="1" />
                               <Label layoutX="21.0" layoutY="83.0" text="Третья точка: " />
-                              <TextField fx:id="inCh3Point3" layoutX="174.0" layoutY="78.0" text="2" />
-                              <TextField fx:id="inCh3Point4" layoutX="174.0" layoutY="110.0" text="3" />
-                              <TextField fx:id="inCh3Point5" layoutX="174.0" layoutY="142.0" text="4" />
-                              <TextField fx:id="inCh3Point6" layoutX="174.0" layoutY="174.0" text="5" />
-                              <TextField fx:id="inCh3Point7" layoutX="174.0" layoutY="206.0" text="6" />
-                              <TextField fx:id="inCh3Point8" layoutX="174.0" layoutY="238.0" text="7" />
-                              <TextField fx:id="inCh3Point9" layoutX="174.0" layoutY="270.0" text="8" />
-                              <TextField fx:id="inCh3Point10" layoutX="174.0" layoutY="302.0" text="9" />
-                              <TextField fx:id="inCh3Point11" layoutX="174.0" layoutY="334.0" text="10" />
-                              <TextField fx:id="inCh3Point12" layoutX="174.0" layoutY="366.0" text="11" />
+                              <TextField fx:id="inCh3Point3" layoutX="174.0" layoutY="78.0" prefWidth="110.0" text="2" />
+                              <TextField fx:id="inCh3Point4" layoutX="174.0" layoutY="110.0" prefWidth="110.0" text="3" />
+                              <TextField fx:id="inCh3Point5" layoutX="174.0" layoutY="142.0" prefWidth="110.0" text="4" />
+                              <TextField fx:id="inCh3Point6" layoutX="174.0" layoutY="174.0" prefWidth="110.0" text="5" />
+                              <TextField fx:id="inCh3Point7" layoutX="174.0" layoutY="206.0" prefWidth="110.0" text="6" />
+                              <TextField fx:id="inCh3Point8" layoutX="174.0" layoutY="238.0" prefWidth="110.0" text="7" />
+                              <TextField fx:id="inCh3Point9" layoutX="174.0" layoutY="270.0" prefWidth="110.0" text="8" />
+                              <TextField fx:id="inCh3Point10" layoutX="174.0" layoutY="302.0" prefWidth="110.0" text="9" />
+                              <TextField fx:id="inCh3Point11" layoutX="174.0" layoutY="334.0" prefWidth="110.0" text="10" />
+                              <TextField fx:id="inCh3Point12" layoutX="174.0" layoutY="366.0" prefWidth="110.0" text="11" />
                               <Label layoutX="20.0" layoutY="115.0" text="Четвертая точка:" />
                               <Label layoutX="20.0" layoutY="147.0" text="Пятая точка: " />
                               <Label layoutX="21.0" layoutY="179.0" text="Шестая точка: " />
@@ -107,11 +117,17 @@
                               <Label layoutX="20.0" layoutY="304.0" text="Десятая точка:" />
                               <Label layoutX="20.0" layoutY="336.0" text="Одиннадцатая точка: " />
                               <Label layoutX="21.0" layoutY="368.0" text="Двенадцатая точка: " />
-                              <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="370.0" layoutY="67.0" pickOnBounds="true" preserveRatio="true">
+                              <Label layoutX="299.0" layoutY="18.0" text="Подпись серии 1: " />
+                              <TextField fx:id="series1Ch3" layoutX="405.0" layoutY="14.0" prefHeight="25.0" prefWidth="217.0" />
+                              <ImageView fitHeight="246.0" fitWidth="329.0" layoutX="302.0" layoutY="112.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../ico/icoCross.png" />
+                                    <Image url="@../ico/ThreeChart.png" />
                                  </image>
                               </ImageView>
+                              <TextField fx:id="series2Ch3" layoutX="405.0" layoutY="44.0" prefHeight="25.0" prefWidth="217.0" />
+                              <TextField fx:id="series3Ch3" layoutX="405.0" layoutY="74.0" prefHeight="25.0" prefWidth="217.0" />
+                              <Label layoutX="299.0" layoutY="48.0" text="Подпись серии 2: " />
+                              <Label layoutX="299.0" layoutY="78.0" text="Подпись серии 3: " />
                            </children>
                         </AnchorPane>
                      </children>
