@@ -51,5 +51,11 @@
 }
 
 .scroll-pane {
-      -fx-control-inner-background: #b8b8b8;
+      -fx-background-color: rgba(0, 0, 0, 0);
 }
+
+.scroll-pane > .viewport  { -fx-background-color: #858585; }
+
+#btnResize {}
+#btnResize:pressed {}
+#btnResize:hover {}
