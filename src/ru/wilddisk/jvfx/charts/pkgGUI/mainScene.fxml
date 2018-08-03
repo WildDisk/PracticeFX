@@ -142,7 +142,7 @@
             <Button fx:id="btnChrt2" layoutY="159.0" mnemonicParsing="false" onAction="#showMenuTwoChart" prefHeight="43.0" prefWidth="139.0" text="Два графика" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
             <Button fx:id="btnChrt1" layoutY="115.0" mnemonicParsing="false" onAction="#showMenuOneChart" prefHeight="43.0" prefWidth="139.0" text="Один график" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
             <Button fx:id="btnChrt3" layoutX="-1.0" layoutY="203.0" mnemonicParsing="false" onAction="#showMenuThreeChart" prefHeight="43.0" prefWidth="139.0" text="Три графика" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-            <Button layoutX="5.0" layoutY="407.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="139.0" text="Наименования точек" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+            <Button layoutX="5.0" layoutY="407.0" mnemonicParsing="false" onAction="#showNamePoint" prefHeight="43.0" prefWidth="139.0" text="Наименования точек" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
          </children>
       </AnchorPane>
    </children>

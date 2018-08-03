@@ -2,6 +2,9 @@ package ru.wilddisk.jvfx.charts.pkgControllers;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.chart.CategoryAxis;
 import javafx.scene.chart.LineChart;
@@ -11,6 +14,7 @@ import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Priority;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.io.PrintWriter;
@@ -56,7 +60,8 @@ public class Controller {
 
                 lineChart.setTitle(ChartTitle.getText());
                 //defining a series
-                if (AncPaneCh1.disableProperty().getValue().equals(false)) {
+                if (AncPaneCh1.disableProperty().getValue().equals(false) && AncPaneCh2.disableProperty().getValue()
+                        .equals(true) && AncPaneCh3.disableProperty().getValue().equals(true)) {
                     XYChart.Series series = new XYChart.Series();
                     series.setName(seriesCh1.getText());
                     //populating the series with data
@@ -74,98 +79,99 @@ public class Controller {
                     series.getData().add(new XYChart.Data("Dec", Integer.parseInt(inCh1Point12.getText())));
 
                     Scene scene = new Scene(lineChart, 800, 600);
-                    scene.getStylesheets().add("ru/wilddisk/jvfx/charts/pkgCSS/chartStyle.css");
+                    scene.getStylesheets().add("/ru/wilddisk/jvfx/charts/pkgCSS/chartStyle.css");
                     lineChart.getData().add(series);
 
                     stage.setScene(scene);
                     stage.show();
-                } else if (AncPaneCh2.disableProperty().getValue().equals(false)) {
+                } else if (AncPaneCh1.disableProperty().getValue().equals(false) && AncPaneCh2.disableProperty().getValue()
+                        .equals(false) && AncPaneCh3.disableProperty().getValue().equals(true)) {
                     XYChart.Series series1 = new XYChart.Series();
                     series1.setName(series1Ch2.getText());
 
-                    series1.getData().add(new XYChart.Data("Jan", 23));
-                    series1.getData().add(new XYChart.Data("Feb", 14));
-                    series1.getData().add(new XYChart.Data("Mar", 15));
-                    series1.getData().add(new XYChart.Data("Apr", 24));
-                    series1.getData().add(new XYChart.Data("May", 34));
-                    series1.getData().add(new XYChart.Data("Jun", 36));
-                    series1.getData().add(new XYChart.Data("Jul", 22));
-                    series1.getData().add(new XYChart.Data("Aug", 45));
-                    series1.getData().add(new XYChart.Data("Sep", 43));
-                    series1.getData().add(new XYChart.Data("Oct", 17));
-                    series1.getData().add(new XYChart.Data("Nov", 29));
-                    series1.getData().add(new XYChart.Data("Dec", 25));
-
+                    series1.getData().add(new XYChart.Data("Jan", Integer.parseInt(inCh1Point1.getText())));
+                    series1.getData().add(new XYChart.Data("Feb", Integer.parseInt(inCh1Point2.getText())));
+                    series1.getData().add(new XYChart.Data("Mar", Integer.parseInt(inCh1Point3.getText())));
+                    series1.getData().add(new XYChart.Data("Apr", Integer.parseInt(inCh1Point4.getText())));
+                    series1.getData().add(new XYChart.Data("May", Integer.parseInt(inCh1Point5.getText())));
+                    series1.getData().add(new XYChart.Data("Jun", Integer.parseInt(inCh1Point6.getText())));
+                    series1.getData().add(new XYChart.Data("Jul", Integer.parseInt(inCh1Point7.getText())));
+                    series1.getData().add(new XYChart.Data("Aug", Integer.parseInt(inCh1Point8.getText())));
+                    series1.getData().add(new XYChart.Data("Sep", Integer.parseInt(inCh1Point9.getText())));
+                    series1.getData().add(new XYChart.Data("Oct", Integer.parseInt(inCh1Point10.getText())));
+                    series1.getData().add(new XYChart.Data("Nov", Integer.parseInt(inCh1Point11.getText())));
+                    series1.getData().add(new XYChart.Data("Dec", Integer.parseInt(inCh1Point12.getText())));
                     XYChart.Series series2 = new XYChart.Series();
                     series2.setName(series2Ch2.getText());
-                    series2.getData().add(new XYChart.Data("Jan", 33));
-                    series2.getData().add(new XYChart.Data("Feb", 34));
-                    series2.getData().add(new XYChart.Data("Mar", 25));
-                    series2.getData().add(new XYChart.Data("Apr", 44));
-                    series2.getData().add(new XYChart.Data("May", 39));
-                    series2.getData().add(new XYChart.Data("Jun", 16));
-                    series2.getData().add(new XYChart.Data("Jul", 55));
-                    series2.getData().add(new XYChart.Data("Aug", 54));
-                    series2.getData().add(new XYChart.Data("Sep", 48));
-                    series2.getData().add(new XYChart.Data("Oct", 27));
-                    series2.getData().add(new XYChart.Data("Nov", 37));
-                    series2.getData().add(new XYChart.Data("Dec", 29));
+                    series2.getData().add(new XYChart.Data("Jan", Integer.parseInt(inCh2Point1.getText())));
+                    series2.getData().add(new XYChart.Data("Feb", Integer.parseInt(inCh2Point2.getText())));
+                    series2.getData().add(new XYChart.Data("Mar", Integer.parseInt(inCh2Point3.getText())));
+                    series2.getData().add(new XYChart.Data("Apr", Integer.parseInt(inCh2Point4.getText())));
+                    series2.getData().add(new XYChart.Data("May", Integer.parseInt(inCh2Point5.getText())));
+                    series2.getData().add(new XYChart.Data("Jun", Integer.parseInt(inCh2Point6.getText())));
+                    series2.getData().add(new XYChart.Data("Jul", Integer.parseInt(inCh2Point7.getText())));
+                    series2.getData().add(new XYChart.Data("Aug", Integer.parseInt(inCh2Point8.getText())));
+                    series2.getData().add(new XYChart.Data("Sep", Integer.parseInt(inCh2Point9.getText())));
+                    series2.getData().add(new XYChart.Data("Oct", Integer.parseInt(inCh2Point10.getText())));
+                    series2.getData().add(new XYChart.Data("Nov", Integer.parseInt(inCh2Point11.getText())));
+                    series2.getData().add(new XYChart.Data("Dec", Integer.parseInt(inCh2Point12.getText())));
 
                     Scene scene = new Scene(lineChart, 800, 600);
-                    scene.getStylesheets().add("ru/wilddisk/jvfx/charts/pkgCSS/chartStyle.css");
+                    scene.getStylesheets().add("/ru/wilddisk/jvfx/charts/pkgCSS/chartStyle.css");
                     lineChart.getData().addAll(series1, series2);
 
                     stage.setScene(scene);
                     stage.show();
-                } else if (AncPaneCh3.disableProperty().getValue().equals(false)) {
+                } else if (AncPaneCh1.disableProperty().getValue().equals(false) && AncPaneCh2.disableProperty().getValue()
+                        .equals(false) && AncPaneCh3.disableProperty().getValue().equals(false)) {
                     XYChart.Series series1 = new XYChart.Series();
                     series1.setName(series1Ch3.getText());
 
-                    series1.getData().add(new XYChart.Data("Jan", 23));
-                    series1.getData().add(new XYChart.Data("Feb", 14));
-                    series1.getData().add(new XYChart.Data("Mar", 15));
-                    series1.getData().add(new XYChart.Data("Apr", 24));
-                    series1.getData().add(new XYChart.Data("May", 34));
-                    series1.getData().add(new XYChart.Data("Jun", 36));
-                    series1.getData().add(new XYChart.Data("Jul", 22));
-                    series1.getData().add(new XYChart.Data("Aug", 45));
-                    series1.getData().add(new XYChart.Data("Sep", 43));
-                    series1.getData().add(new XYChart.Data("Oct", 17));
-                    series1.getData().add(new XYChart.Data("Nov", 29));
-                    series1.getData().add(new XYChart.Data("Dec", 25));
+                    series1.getData().add(new XYChart.Data("Jan", Integer.parseInt(inCh1Point1.getText())));
+                    series1.getData().add(new XYChart.Data("Feb", Integer.parseInt(inCh1Point2.getText())));
+                    series1.getData().add(new XYChart.Data("Mar", Integer.parseInt(inCh1Point3.getText())));
+                    series1.getData().add(new XYChart.Data("Apr", Integer.parseInt(inCh1Point4.getText())));
+                    series1.getData().add(new XYChart.Data("May", Integer.parseInt(inCh1Point5.getText())));
+                    series1.getData().add(new XYChart.Data("Jun", Integer.parseInt(inCh1Point6.getText())));
+                    series1.getData().add(new XYChart.Data("Jul", Integer.parseInt(inCh1Point7.getText())));
+                    series1.getData().add(new XYChart.Data("Aug", Integer.parseInt(inCh1Point8.getText())));
+                    series1.getData().add(new XYChart.Data("Sep", Integer.parseInt(inCh1Point9.getText())));
+                    series1.getData().add(new XYChart.Data("Oct", Integer.parseInt(inCh1Point10.getText())));
+                    series1.getData().add(new XYChart.Data("Nov", Integer.parseInt(inCh1Point11.getText())));
+                    series1.getData().add(new XYChart.Data("Dec", Integer.parseInt(inCh1Point12.getText())));
 
                     XYChart.Series series2 = new XYChart.Series();
                     series2.setName(series2Ch3.getText());
-                    series2.getData().add(new XYChart.Data("Jan", 33));
-                    series2.getData().add(new XYChart.Data("Feb", 34));
-                    series2.getData().add(new XYChart.Data("Mar", 25));
-                    series2.getData().add(new XYChart.Data("Apr", 44));
-                    series2.getData().add(new XYChart.Data("May", 39));
-                    series2.getData().add(new XYChart.Data("Jun", 16));
-                    series2.getData().add(new XYChart.Data("Jul", 55));
-                    series2.getData().add(new XYChart.Data("Aug", 54));
-                    series2.getData().add(new XYChart.Data("Sep", 48));
-                    series2.getData().add(new XYChart.Data("Oct", 27));
-                    series2.getData().add(new XYChart.Data("Nov", 37));
-                    series2.getData().add(new XYChart.Data("Dec", 29));
+                    series2.getData().add(new XYChart.Data("Jan", Integer.parseInt(inCh2Point1.getText())));
+                    series2.getData().add(new XYChart.Data("Feb", Integer.parseInt(inCh2Point2.getText())));
+                    series2.getData().add(new XYChart.Data("Mar", Integer.parseInt(inCh2Point3.getText())));
+                    series2.getData().add(new XYChart.Data("Apr", Integer.parseInt(inCh2Point4.getText())));
+                    series2.getData().add(new XYChart.Data("May", Integer.parseInt(inCh2Point5.getText())));
+                    series2.getData().add(new XYChart.Data("Jun", Integer.parseInt(inCh2Point6.getText())));
+                    series2.getData().add(new XYChart.Data("Jul", Integer.parseInt(inCh2Point7.getText())));
+                    series2.getData().add(new XYChart.Data("Aug", Integer.parseInt(inCh2Point8.getText())));
+                    series2.getData().add(new XYChart.Data("Sep", Integer.parseInt(inCh2Point9.getText())));
+                    series2.getData().add(new XYChart.Data("Oct", Integer.parseInt(inCh2Point10.getText())));
+                    series2.getData().add(new XYChart.Data("Nov", Integer.parseInt(inCh2Point11.getText())));
+                    series2.getData().add(new XYChart.Data("Dec", Integer.parseInt(inCh2Point12.getText())));
 
                     XYChart.Series series3 = new XYChart.Series();
                     series3.setName(series3Ch3.getText());
-                    series3.getData().add(new XYChart.Data("Jan", 44));
-                    series3.getData().add(new XYChart.Data("Feb", 35));
-                    series3.getData().add(new XYChart.Data("Mar", 36));
-                    series3.getData().add(new XYChart.Data("Apr", 33));
-                    series3.getData().add(new XYChart.Data("May", 31));
-                    series3.getData().add(new XYChart.Data("Jun", 26));
-                    series3.getData().add(new XYChart.Data("Jul", 22));
-                    series3.getData().add(new XYChart.Data("Aug", 25));
-                    series3.getData().add(new XYChart.Data("Sep", 43));
-                    series3.getData().add(new XYChart.Data("Oct", 44));
-                    series3.getData().add(new XYChart.Data("Nov", 45));
-                    series3.getData().add(new XYChart.Data("Dec", 44));
+                    series3.getData().add(new XYChart.Data("Jan", Integer.parseInt(inCh3Point1.getText())));
+                    series3.getData().add(new XYChart.Data("Feb", Integer.parseInt(inCh3Point2.getText())));
+                    series3.getData().add(new XYChart.Data("Mar", Integer.parseInt(inCh3Point3.getText())));
+                    series3.getData().add(new XYChart.Data("Apr", Integer.parseInt(inCh3Point4.getText())));
+                    series3.getData().add(new XYChart.Data("May", Integer.parseInt(inCh3Point5.getText())));
+                    series3.getData().add(new XYChart.Data("Jun", Integer.parseInt(inCh3Point6.getText())));
+                    series3.getData().add(new XYChart.Data("Jul", Integer.parseInt(inCh3Point7.getText())));
+                    series3.getData().add(new XYChart.Data("Aug", Integer.parseInt(inCh3Point8.getText())));
+                    series3.getData().add(new XYChart.Data("Sep", Integer.parseInt(inCh3Point9.getText())));
+                    series3.getData().add(new XYChart.Data("Oct", Integer.parseInt(inCh3Point10.getText())));
+                    series3.getData().add(new XYChart.Data("Nov", Integer.parseInt(inCh3Point11.getText())));
+                    series3.getData().add(new XYChart.Data("Dec", Integer.parseInt(inCh3Point12.getText())));
 
                     Scene scene = new Scene(lineChart, 800, 600);
-                    scene.getStylesheets().add("ru/wilddisk/jvfx/charts/pkgCSS/chartStyle.css");
+                    scene.getStylesheets().add("/ru/wilddisk/jvfx/charts/pkgCSS/chartStyle.css");
                     lineChart.getData().addAll(series1, series2, series3);
 
                     stage.setScene(scene);
@@ -250,7 +256,7 @@ public class Controller {
     public void showMenuTwoChart(ActionEvent actionEvent) {
         if (actionEvent.getSource() == btnChrt2) {
             AncPaneCh2.toFront();
-            AncPaneCh1.disableProperty().setValue(true);
+            AncPaneCh1.disableProperty().setValue(false);
             AncPaneCh1.visibleProperty().setValue(true);
             AncPaneCh2.disableProperty().setValue(false);
             AncPaneCh2.visibleProperty().setValue(true);
@@ -262,12 +268,22 @@ public class Controller {
     public void showMenuThreeChart(ActionEvent actionEvent) {
         if (actionEvent.getSource() == btnChrt3) {
             AncPaneCh3.toFront();
-            AncPaneCh1.disableProperty().setValue(true);
+            AncPaneCh1.disableProperty().setValue(false);
             AncPaneCh1.visibleProperty().setValue(true);
-            AncPaneCh2.disableProperty().setValue(true);
+            AncPaneCh2.disableProperty().setValue(false);
             AncPaneCh2.visibleProperty().setValue(true);
             AncPaneCh3.disableProperty().setValue(false);
             AncPaneCh3.visibleProperty().setValue(true);
         }
+    }
+
+    public void showNamePoint(ActionEvent actionEvent) throws Exception {
+        Stage stage = new Stage();
+        Parent root = FXMLLoader.load(getClass().getResource("/ru/wilddisk/jvfx/charts/pkgGUI/namePoint.fxml"));
+        stage.setScene(new Scene(root, 251, 430));
+        stage.setResizable(false);
+        stage.initModality(Modality.WINDOW_MODAL);
+        stage.initOwner(((Node)actionEvent.getSource()).getScene().getWindow());
+        stage.show();
     }
 }

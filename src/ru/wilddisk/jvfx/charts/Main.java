@@ -15,7 +15,7 @@ public class Main extends Application {
         primaryStage.setTitle("ChartsOn");
 
         primaryStage.setScene(new Scene(root, 880, 450));
-        primaryStage.getIcons().add(new Image("ru/wilddisk/jvfx/charts/ico/mainIco.jpg"));
+        primaryStage.getIcons().add(new Image("/ru/wilddisk/jvfx/charts/ico/mainIco.jpg"));
         primaryStage.setMinWidth(880);
         primaryStage.setMinHeight(450);
         primaryStage.initStyle(StageStyle.UNIFIED);
