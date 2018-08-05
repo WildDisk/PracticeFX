@@ -7,7 +7,7 @@
 
 <AnchorPane id="rootAnchorPane" prefHeight="430.0" prefWidth="251.0" stylesheets="@../pkgCSS/mainStyle.css" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.wilddisk.jvfx.charts.pkgControllers.NamePoint">
    <children>
-      <Label layoutX="14.0" layoutY="15.0" text="Точка 1: " />
+      <Label fx:id="lb1" layoutX="14.0" layoutY="15.0" text="Точка 1: " />
       <Label layoutX="14.0" layoutY="45.0" text="Точка 2:" />
       <Label layoutX="14.0" layoutY="75.0" text="Точка 3: " />
       <Label layoutX="14.0" layoutY="105.0" text="Точка 4:" />
@@ -19,19 +19,19 @@
       <Label layoutX="14.0" layoutY="285.0" text="Точка 10: " />
       <Label layoutX="14.0" layoutY="315.0" text="Точка 11: " />
       <Label layoutX="14.0" layoutY="345.0" text="Точка 12: " />
-      <TextField layoutX="82.0" layoutY="11.0" />
-      <TextField layoutX="82.0" layoutY="41.0" />
-      <TextField layoutX="82.0" layoutY="71.0" />
-      <TextField layoutX="82.0" layoutY="101.0" />
-      <TextField layoutX="82.0" layoutY="131.0" />
-      <TextField layoutX="82.0" layoutY="161.0" />
-      <TextField layoutX="82.0" layoutY="191.0" />
-      <TextField layoutX="82.0" layoutY="221.0" />
-      <TextField layoutX="82.0" layoutY="251.0" />
-      <TextField layoutX="82.0" layoutY="281.0" />
-      <TextField layoutX="82.0" layoutY="311.0" />
-      <TextField layoutX="82.0" layoutY="341.0" />
-      <Button id="btnDown" layoutX="82.0" layoutY="391.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="67.0" text="OK" />
-      <Button id="btnDown" layoutX="164.0" layoutY="391.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="67.0" text="Отмена" />
+      <TextField fx:id="namePoint1" layoutX="82.0" layoutY="11.0" text="Jan" />
+      <TextField fx:id="namePoint2" layoutX="82.0" layoutY="41.0" text="Feb" />
+      <TextField fx:id="namePoint3" layoutX="82.0" layoutY="71.0" text="Mar" />
+      <TextField fx:id="namePoint4" layoutX="82.0" layoutY="101.0" text="Apr" />
+      <TextField fx:id="namePoint5" layoutX="82.0" layoutY="131.0" text="May" />
+      <TextField fx:id="namePoint6" layoutX="82.0" layoutY="161.0" text="Jun" />
+      <TextField fx:id="namePoint7" layoutX="82.0" layoutY="191.0" text="Jul" />
+      <TextField fx:id="namePoint8" layoutX="82.0" layoutY="221.0" text="Aug" />
+      <TextField fx:id="namePoint9" layoutX="82.0" layoutY="251.0" text="Sep" />
+      <TextField fx:id="namePoint10" layoutX="82.0" layoutY="281.0" text="Oct" />
+      <TextField fx:id="namePoint11" layoutX="82.0" layoutY="311.0" text="Nov" />
+      <TextField fx:id="namePoint12" layoutX="82.0" layoutY="341.0" text="Dec" />
+      <Button id="btnDown" fx:id="btnOk" layoutX="82.0" layoutY="391.0" mnemonicParsing="false" onAction="#applyNamePoint" prefHeight="25.0" prefWidth="67.0" text="OK" />
+      <Button id="btnDown" fx:id="btnCancel" layoutX="164.0" layoutY="391.0" mnemonicParsing="false" onAction="#closeDialog" prefHeight="25.0" prefWidth="67.0" text="Отмена" />
    </children>
 </AnchorPane>

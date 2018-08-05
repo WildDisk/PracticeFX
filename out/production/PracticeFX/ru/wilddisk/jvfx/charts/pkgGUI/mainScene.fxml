@@ -134,7 +134,7 @@
                   </AnchorPane>
               </content>
             </ScrollPane>
-            <Button id="btnDown" fx:id="btnCloser" layoutX="581.0" layoutY="416.0" mnemonicParsing="false" text="Отмена" AnchorPane.bottomAnchor="9.0" AnchorPane.rightAnchor="22.0" />
+            <Button id="btnDown" fx:id="btnClose" layoutX="581.0" layoutY="416.0" mnemonicParsing="false" onAction="#switchText" text="Отмена" AnchorPane.bottomAnchor="9.0" AnchorPane.rightAnchor="22.0" />
             <Button id="btnDown" fx:id="btnOk" layoutX="500.0" layoutY="416.0" mnemonicParsing="false" onAction="#showChart" prefHeight="25.0" prefWidth="58.0" text="ОК" AnchorPane.bottomAnchor="9.0" AnchorPane.rightAnchor="103.0" />
          </children></AnchorPane>
       <AnchorPane prefHeight="360.0" prefWidth="139.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
