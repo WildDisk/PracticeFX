@@ -8,7 +8,7 @@ import javafx.stage.Stage;
 
 public class NamePoint {
     @FXML
-    public TextField namePoint1, namePoint2, namePoint3, namePoint4, namePoint5, namePoint6, namePoint7, namePoint8,
+    private TextField namePoint1, namePoint2, namePoint3, namePoint4, namePoint5, namePoint6, namePoint7, namePoint8,
                             namePoint9, namePoint10, namePoint11, namePoint12;
 
     public static String field1, field2, field3, field4, field5, field6, field7, field8, field9, field10, field11, field12;
