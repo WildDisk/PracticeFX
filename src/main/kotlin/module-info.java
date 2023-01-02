@@ -9,6 +9,6 @@ module ru.wilddisk.practicefx {
     requires org.kordamp.ikonli.javafx;
     requires org.kordamp.bootstrapfx.core;
 
-    opens ru.wilddisk.practicefx to javafx.fxml;
+    opens ru.wilddisk.practicefx.controller to javafx.fxml;
     exports ru.wilddisk.practicefx;
 }
