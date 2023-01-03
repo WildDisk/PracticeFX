@@ -6,7 +6,7 @@
 
     <groupId>ru.wilddisk</groupId>
     <artifactId>PracticeFX</artifactId>
-    <version>2.0.1-SNAPSHOT</version>
+    <version>2.0.3-SNAPSHOT</version>
     <name>PracticeFX</name>
 
     <scm>

@@ -8,21 +8,35 @@
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
-   <TreeTableView fx:id="treeTableView" prefHeight="405.0" prefWidth="751.0">
-     <columns>
-       <TreeTableColumn fx:id="empNoCol" prefWidth="75.0" text="Emp No" />
-         <TreeTableColumn fx:id="fullNameCol" prefWidth="75.0" text="Full Name">
-             <columns>
-                 <TreeTableColumn fx:id="firstNameCol" onEditCommit="#callOnT" prefWidth="75.0" text="First Name" />
-                 <TreeTableColumn fx:id="lastNameCol" prefWidth="75.0" text="Last Name" />
-             </columns>
-         </TreeTableColumn>
-         <TreeTableColumn fx:id="genderCol" prefWidth="75.0" text="Gender" />
-         <TreeTableColumn fx:id="positionCol" prefWidth="75.0" text="Position" />
-         <TreeTableColumn fx:id="singleCol" prefWidth="75.0" text="Single" />
-     </columns>
-   </TreeTableView>
-    <Button fx:id="btm" onAction="#onHelloButtonClick" text="Hello!" />
-
-                <Label fx:id="welcomeText" />
+   <HBox prefHeight="100.0" prefWidth="200.0">
+      <children>
+         <Button mnemonicParsing="false" onAction="#addSerias" text="Add serias" />
+         <Button mnemonicParsing="false" onAction="#addPoint" text="Add point" />
+      </children>
+   </HBox>
+    <TreeTableView fx:id="treeTableView" onMouseClicked="#onTouch" prefHeight="428.0" prefWidth="751.0">
+        <columns>
+            <TreeTableColumn fx:id="point" prefWidth="75.0" text="Point" />
+            <TreeTableColumn fx:id="pointValue" prefWidth="75.0" text="Value" />
+        </columns>
+    </TreeTableView>
+    <VBox prefHeight="200.0" prefWidth="100.0">
+        <children>
+            <HBox prefHeight="31.0" prefWidth="751.0">
+                <children>
+                    <Label prefHeight="24.0" prefWidth="73.0" text="Point name: " />
+                    <TextField fx:id="txtPointName" prefHeight="25.0" prefWidth="205.0" />
+                </children>
+            </HBox>
+            <HBox prefHeight="110.0" prefWidth="751.0">
+                <children>
+                    <Label prefHeight="17.0" prefWidth="74.0" text="Point value: " />
+                    <TextField fx:id="txtPointValue" prefHeight="25.0" prefWidth="204.0" />
+                </children>
+            </HBox>
+            <Button mnemonicParsing="false" onAction="#apply" text="Apply" />
+        </children>
+    </VBox>
+    <Button onAction="#buildChart" text="Build" />
+    <Label fx:id="lbl" text="Label" />
 </VBox>

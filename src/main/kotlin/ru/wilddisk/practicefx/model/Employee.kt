@@ -1,4 +1,4 @@
-package ru.wilddisk.practicefx
+package ru.wilddisk.practicefx.model
 
 data class Employee(
     val empNo: String,

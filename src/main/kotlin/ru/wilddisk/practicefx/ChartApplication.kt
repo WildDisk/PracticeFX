@@ -1,12 +1,11 @@
 package ru.wilddisk.practicefx
 
 import javafx.application.Application
-import javafx.fxml.FXMLLoader
-import javafx.scene.Scene
 import javafx.stage.Stage
 import ru.wilddisk.practicefx.config.CfgFXML
 import ru.wilddisk.practicefx.config.CfgScene
 import ru.wilddisk.practicefx.config.CfgStage
+import java.io.File
 
 class ChartApplication : Application() {
     override fun start(stage: Stage) {
@@ -16,7 +15,8 @@ class ChartApplication : Application() {
                 x = 800.0,
                 y = 600.0
             ),
-            title = "Chart"
+            title = "Chart",
+            icon = File("src/main/resources/img.png")
         ).build().show()
     }
 }

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" prefHeight="548.0" prefWidth="791.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.wilddisk.practicefx.controller.EmployeeController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <TreeTableView fx:id="treeTableView" prefHeight="405.0" prefWidth="751.0">
+     <columns>
+       <TreeTableColumn fx:id="empNoCol" prefWidth="75.0" text="Emp No" />
+         <TreeTableColumn fx:id="fullNameCol" prefWidth="75.0" text="Full Name">
+             <columns>
+                 <TreeTableColumn fx:id="firstNameCol" onEditCommit="#callOnT" prefWidth="75.0" text="First Name" />
+                 <TreeTableColumn fx:id="lastNameCol" prefWidth="75.0" text="Last Name" />
+             </columns>
+         </TreeTableColumn>
+         <TreeTableColumn fx:id="genderCol" prefWidth="75.0" text="Gender" />
+         <TreeTableColumn fx:id="positionCol" prefWidth="75.0" text="Position" />
+         <TreeTableColumn fx:id="singleCol" prefWidth="75.0" text="Single" />
+     </columns>
+   </TreeTableView>
+    <Button fx:id="btm" onAction="#onHelloButtonClick" text="Hello!" />
+
+                <Label fx:id="welcomeText" />
+</VBox>
